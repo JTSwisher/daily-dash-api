@@ -6,7 +6,12 @@ class Api::V1::AuthenticationController < ApplicationController
             render json: {error: "No such user exists."}
         end 
        if user.authenticate(user_params[:password])
-            render json: user, only: [:id, :username, :name]
+            secret_key = Rails.application.secrets.secret_key_base[0]
+            token = JWT.encode({
+            user_id: user.id,
+            username: user.username    
+            }, secret_key)
+            render json: { token: token }
        else 
             render json: {error: "Invalid Password"}
        end 
