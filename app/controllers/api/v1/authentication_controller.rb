@@ -11,7 +11,7 @@ class Api::V1::AuthenticationController < ApplicationController
             user_id: user.id,
             username: user.username    
             }, secret_key)
-            render json: { token: token }
+            render json: { token: token, user: user }
        else 
             render json: {error: "Invalid Password"}
        end 
@@ -20,7 +20,7 @@ class Api::V1::AuthenticationController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:username, :name, :password)
+        params.require(:user).permit(:username, :password)
     end 
 
 end 

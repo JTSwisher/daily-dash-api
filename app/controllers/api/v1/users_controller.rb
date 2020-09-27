@@ -3,6 +3,11 @@ class Api::V1::UsersController < ApplicationController
     def create
         user = User.new(user_params)
         if user.save
+            secret_key = Rails.application.secrets.secret_key_base[0]
+            token = JWT.encode({
+            user_id: user.id,
+            username: user.username    
+            }, secret_key)
             render json: user, only: [:id, :username, :name]
         else 
             render json: {
