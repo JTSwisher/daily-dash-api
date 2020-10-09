@@ -8,7 +8,7 @@ class Api::V1::UsersController < ApplicationController
             user_id: user.id,
             username: user.username    
             }, secret_key)
-            render json: user, only: [:id, :username, :name]
+            render json: { token: token, user: user }
         else 
             render json: {
                 error: "Error signing up, please try again.",
