@@ -62,7 +62,7 @@ REACT_APP_NEWS_API_KEY = "API key"
 Fork and clone the [Frontend Repo](https://github.com/JTSwisher/capstone_react_frontend) and the [Backend Repo](https://github.com/JTSwisher/capstone_backend_api) to your local machine.
 
 #### Backend
-Change directories into the backend local directory. Run bundle install to install dependencies. Ensure PostgreSQL is running on your machin, create and migrate the database.
+Change directories into the backend local directory. Run bundle install to install dependencies. Ensure PostgreSQL is running on your machine, create and migrate the database.
 ```
 $cd daily-dash-api
 $bundle install
