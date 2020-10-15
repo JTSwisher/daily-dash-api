@@ -2,6 +2,7 @@ class Api::V1::TodosController < ApplicationController
     
     def index
         todos = Todo.all.where(:user_id => params["user_id"])
+        
         render json: todos
     end 
 
