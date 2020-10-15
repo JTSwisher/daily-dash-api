@@ -7,7 +7,7 @@ class Api::V1::TodosController < ApplicationController
     end 
 
     def create
-        todo = Todo.new(todo_params)
+        todo = @user.todos.build(todo_params)
         if todo.save 
             render json: todo, only: [:id, :body, :created_at, :user_id]
         else 
@@ -24,6 +24,6 @@ class Api::V1::TodosController < ApplicationController
     private
 
     def todo_params
-        params.require(:todo).permit(:body, :user_id)
+        params.require(:todo).permit(:body)
     end 
 end
