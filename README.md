@@ -6,7 +6,7 @@ HomeDash is a React SPA with a Rails API backend intended to replace a current u
 
 ## App Walkthrough
 
-![App Navigation Demo](demo/landing.gif)
+![App Navigation Demo](demo/nav.gif)
 
 ### Home Page Demo
 
