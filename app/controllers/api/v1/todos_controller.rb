@@ -1,8 +1,8 @@
 class Api::V1::TodosController < ApplicationController 
+    before_action :authenticate
     
     def index
-        todos = Todo.all.where(:user_id => params["user_id"])
-        
+        todos = Todo.all.where(:user_id => @user.id)
         render json: todos
     end 
 
