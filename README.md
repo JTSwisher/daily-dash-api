@@ -4,6 +4,8 @@ HomeDash is a React SPA with a Rails API backend intended to replace a current u
 
 [Frontend Repo](https://github.com/JTSwisher/daily-dash-frontend) | [Backend Repo](https://github.com/JTSwisher/daily-dash-api)
 
+## [Video Demo](https://youtu.be/r8Ez0cKWmIQ)
+
 ## App Walkthrough
 
 ![App Navigation Demo](demo/nav.gif)
